@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Card</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Garamond', serif; /* Victorian-style font */
+            background: #f0f0f0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        /* Flower animation background */
+        .flower-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2cxaWVmaW05c2JxMnUwdXNxbnFjNjFhODJvaDl4ZWJrcWU3YTBoOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3TZgJXiwbdbLG/giphy.gif') center center no-repeat;
+            background-size: cover;
+            animation: animateBackground 10s infinite alternate;
+            z-index: -1;
+        }
+
+        /* Animation for flower background */
+        @keyframes animateBackground {
+            0% {
+                background-position: center center;
+            }
+            100% {
+                background-position: bottom right;
+            }
+        }
+
+        /* Virtual card styling */
+        .virtual-card-container {
+            position: relative;
+            background-color: rgba(78, 121, 84, 0.8); /* Light background with transparency */
+            width: 80%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #4B0082; /* Dark purple for Victorian elegance */
+            font-size: 1.5rem;
+            text-align: left;
+            line-height: 1.6;
+            letter-spacing: 1px;
+            box-sizing: border-box;
+        }
+
+        /* Styling the header */
+        .virtual-card-container h1 {
+            font-family: 'Garamond', serif;
+            font-size: 3rem;
+            color: #00208b; /* Deep blue for elegance */
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+
+        /* The content in the card */
+        .content {
+            font-size: 1.2rem;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-size: 1.5rem;
+            font-style: italic;
+        }
+
+        /* Media query for mobile responsiveness */
+        @media (max-width: 768px) {
+            .virtual-card-container {
+                width: 90%;
+                padding: 20px;
+                font-size: 1.2rem;
+            }
+
+            .virtual-card-container h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .virtual-card-container h1 {
+                font-size: 1.6rem;
+            }
+
+            .content {
+                font-size: 0.9rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Flower background animation -->
+<div class="flower-background"></div>
+
+<!-- Virtual Card Content -->
+<div class="virtual-card-container">
+    <h1>Dearest Kannu,</h1>
+    
+    <div class="content">
+        <p>
+            I hope you are healthy and sleep properly. I wanted to take a moment to express
+            my deepest gratitude and appreciation for you. You are such a lovely person, and I feel so fortunate 
+            to have you in my life.
+        </p>
+        
+        <p>
+            Life has its ups and downs, but with you by my side, every moment feels brighter. Thank you for being 
+            a wonderful friend, and for all the joy you bring to my days.
+        </p>
+
+        <p>
+            The hard time you are having right now will pass. We will have our moment where both will be sipping our tea while I flex about my gyat. Everything will be fine.
+        </p>
+
+        <p class="signature">
+            Yours faithfully,<br>
+            Jaanu
+        </p>
+    </div>
+</div>
+
+<!-- Soothing background audio -->
+<audio autoplay loop>
+    <source src="https://soundcloud.com/kamil-jamio-kowski/seismic-souls-opera-gx-theme?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
